@@ -1,0 +1,48 @@
+.c-pagination {
+  margin: 72px 0;
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    li {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 4px;
+      margin-left: 4px;
+
+      a {
+        line-height: 1;
+      }
+
+      &:last-child {
+        margin-right: 0;
+        margin-left: 0;
+      }
+
+      &.is-next {
+        margin-left: 32px;
+      }
+
+      &.is-prev {
+        margin-right: 32px;
+      }
+
+      &.disabled {
+        cursor: auto;
+
+        button {
+          cursor: auto;
+        }
+      }
+
+      &.is-active {
+        border-radius: 50%;
+        background-color: $blue;
+        color: $white;
+      }
+    }
+  }
+}

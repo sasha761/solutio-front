@@ -1,0 +1,25 @@
+.c-tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    border: 1px solid #000;
+    border-radius: rem(100);
+    padding: rem(4) rem(12);
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: 150%;
+    color: #000;
+    margin-right: rem(4);
+    margin-bottom: rem(4);
+    letter-spacing: rem(-0.75);
+  }
+
+  @include mq('tablet') {
+    &__item {
+      font-size: 12px;
+      padding: 4px 8px;
+      border-radius: 80px;
+    }
+  }
+}

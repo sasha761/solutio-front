@@ -1,0 +1,50 @@
+.c-arrow {
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  &:hover {
+    svg {
+      transform: rotate(45deg);
+    }
+  }
+
+  svg {
+    width: rem(24);
+    height: auto;
+    transition: all 0.3s ease;
+  }
+
+  &.is-white {
+    border: 1px solid #fff;
+    svg {
+      fill: #fff;
+    }
+  }
+
+  &.is-black {
+    border: 1px solid #000;
+    svg {
+      fill: #000;
+    }
+  }
+
+  &.is-big {
+    width: rem(128);
+    height: rem(128);
+  }
+
+  @include mq('tablet') {
+    &.is-big {
+      width: 64px;
+      height: 64px;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}

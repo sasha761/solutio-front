@@ -1,0 +1,167 @@
+.c-phone {
+	position: relative;
+	border-bottom: 1px solid #000;
+
+	&.is-active {
+		label {
+			top: rem(-5);
+			color: #5644F4;
+		}
+	}
+
+	&.is-invalid {
+		label {
+			color: #d93b46;
+		}
+	}
+
+	.is-hide {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	label {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		font-weight: 700;
+		font-size: rem(18);
+		line-height: 144%;
+		transition: all 0.3s ease;
+		z-index: 1;
+		cursor: auto;
+	}
+
+	input {
+		border: 0;
+		padding: rem(8) 0;
+		font-weight: 700;
+		font-size: rem(16);
+		line-height: 160%;
+		position: relative;
+		z-index: 2;
+		background: transparent;
+	}
+
+	.is-error {
+		font-weight: 400;
+		font-size: rem(14);
+		line-height: 129%;
+		color: #d93b46;
+		position: absolute;
+		bottom: rem(-25);
+	}
+
+	.vue-tel-input {
+		border: none;
+		border-radius: 0;
+		display: flex;
+		align-items: center;
+
+		&:focus-within {
+			box-shadow: none;
+			border: none;
+		}
+	}
+
+	.vti__dropdown {
+		background: #f2f1ff;
+		border-radius: rem(96);
+		padding: rem(4) rem(8) rem(4) rem(4);
+		margin-right: rem(10);
+
+		.vti__flag {
+			// border-radius: 100%;
+			// overflow: hidden;
+			// width: 24px;
+			// height: 24px;
+			margin-right: rem(4);
+		}
+
+		.vti__country-code {
+			font-weight: 400;
+			font-size: rem(14);
+			line-height: 129%;
+			color: #000;
+		}
+
+		&-list {
+			border: 1px solid #e0e0e0;
+			border-radius: rem(16);
+			z-index: 5;
+	
+			&.below {
+				top: calc(100% + rem(4));
+			}
+		}
+	}
+
+	.vti__dropdown-item {
+		padding: rem(12) rem(16);
+		display: flex;
+		align-items: center;
+
+		&.last-preferred {
+			border-bottom: 0;
+		}
+
+		strong, span {
+			font-weight: 400;
+			font-size: rem(14);
+			line-height: 129%;
+			color: #000;
+		}
+
+		strong {
+			order: 3;
+		}
+
+		span {
+			order: 2;
+			margin-right: rem(4);
+		}
+
+		.vti__flag {
+			// border-radius: 100%;
+			// overflow: hidden;
+			// width: 20px;
+			// height: 20px;
+			margin-right: rem(8);
+			order: 1;
+		}
+	}
+
+	@include mq('tablet') {
+
+		.is-error {
+			font-size: 12px;
+			bottom: -20px;
+		}
+
+		&.is-active {
+			label {
+				font-size: 14px;
+			}
+		}
+
+		// input {
+		// 	font-weight: 700;
+		// 	font-size: 16px;
+		// 	line-height: 129%;
+		// }
+
+		label {
+			font-size: 16px;
+		}
+	}
+
+	@include mq('phone-large') {
+		.vti__dropdown {	
+			&-list {
+				max-width: 315px;
+				width: max-content;
+			}
+		}
+	}
+}

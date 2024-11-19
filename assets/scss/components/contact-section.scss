@@ -1,0 +1,22 @@
+.c-contact-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: rem(32);
+  background-color: black;
+  color: white;
+  font-weight: 400;
+  font-size: rem(40);
+  line-height: 120%;
+  border-radius: rem(32);
+
+  @include mq('tablet') {
+    flex-direction: column;
+    font-size: 32px;
+
+    &__title {
+      margin-bottom: 24px;
+      text-align: center;
+    }
+  }
+}

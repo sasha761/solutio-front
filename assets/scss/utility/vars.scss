@@ -1,0 +1,28 @@
+$primary: #F59D19;
+$black: #000;
+$red: #EA0000;
+$white: #fff;
+$orange: #CD835C;
+$blue: #004976;
+$yellow: #ffc72c;
+
+
+// ----------------------------
+// Media Breakpoints
+// ----------------------------
+$breakpoints: (
+  'iphone5': 320px,
+  'phone': 380px,
+  'phone-medium': 420px,
+  'phone-wide': 480px,
+  'phablet': 560px,
+  'phone-large': 576px,
+  'tablet-small': 640px,
+  'tablet': 768px,
+  'tablet-medium': 992px,
+  'tablet-wide': 1024px,
+  'desktop': 1200px,
+  'desktop-medium': 1320px,
+  'desktop-wide': 1440px,
+  'desktop-large': 1600px
+);

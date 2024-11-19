@@ -1,0 +1,53 @@
+.u-btn {
+	display: inline-flex;
+	align-items: center;
+	position: relative;
+	cursor: pointer;
+  line-height: 1;
+	font-weight: 400;
+  padding: rem(10) rem(16);
+  border-radius: rem(100);
+
+	span {
+		margin-right: rem(8);
+	}
+
+	&.is-big {
+		font-size: rem(18);
+		padding: rem(20) rem(36);
+
+		svg {
+			margin-left: rem(8);
+		}
+	}
+
+	&.is-black {
+		color: #fff;
+		background: #000;
+
+		svg {
+			path {
+				fill: white;
+			}
+		}
+	}
+
+	&:disabled {
+		background-color: #C1C1C1!important;
+		cursor: no-drop;
+	}
+
+	&.is-white {
+		color: #000;
+		background: #fff;
+		font-weight: 400;
+		font-size: rem(18);
+		line-height: 133%;
+
+		svg {
+			path {
+				fill: black;
+			}
+		}
+	}
+}

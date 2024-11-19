@@ -1,0 +1,90 @@
+.c-select {
+	position: relative;
+	border-bottom: 1px solid #000;
+
+	&.is-active {
+		label {
+			top: rem(-5);
+			color: #5644F4;
+		}
+	}
+
+	&.is-invalid {
+		label {
+			color: #d93b46;
+		}
+	}
+
+	label {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		font-weight: 700;
+		font-size: rem(18);
+		line-height: 144%;
+		transition: all 0.3s ease;
+	}
+
+	.is-error {
+		font-weight: 400;
+		font-size: rem(14);
+		line-height: 129%;
+		color: #d93b46;
+		position: absolute;
+		bottom: rem(-25);
+	}
+
+	.vs__dropdown-toggle {
+		border: none;
+	}
+
+	.vs__selected-options {
+		padding: rem(8) 0;
+	}
+
+	.vs__search {
+		padding: 0;
+    margin: 0;
+    border: 0;
+	}
+
+	.vs__selected {
+		font-weight: 700;
+		font-size: rem(16);
+		line-height: 160%;
+		padding: 0;
+    margin: 0;
+    border: 0;
+	}
+
+	.v-select {
+		ul {
+			top: calc(100% + rem(8));
+			border: 1px solid #e0e0e0;
+			border-radius: rem(16);
+		}
+	}
+
+	@include mq('tablet') {
+		.is-error {
+			font-size: 12px;
+		}
+
+		&.is-active {
+			label {
+				font-size: 14px;
+			}
+		}
+
+		.vs__selected {
+			font-weight: 700;
+			font-size: 14px;
+			line-height: 129%;
+		}
+
+		label {
+			font-size: 16px;
+		}
+	}	
+}

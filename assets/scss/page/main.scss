@@ -1,0 +1,46 @@
+.p-main {
+  .c-contact-section {
+    margin-bottom: rem(100);
+  }
+
+  .l-about-us {
+    margin-bottom: rem(100);
+  }
+
+  .l-banner {
+    margin-bottom: rem(100);
+  }
+
+  .l-our-services {
+    margin-bottom: rem(100);
+  }
+
+  .l-our-works {
+    margin-bottom: rem(100);
+  }
+
+  .l-text {
+    margin-bottom: rem(100);
+  }
+
+  @include mq('tablet') {
+    .l-text {
+      margin-bottom: 40px;
+    }
+    .l-banner {
+      margin-bottom: 40px;
+    }
+    .l-about-us {
+      margin-bottom: 48px;
+    }
+    .l-our-works {
+      margin-bottom: 48px;
+    }
+    .c-contact-section {
+      margin-bottom: 48px;
+    }
+    .l-our-services {
+      margin-bottom: 48px;
+    }
+  }
+}

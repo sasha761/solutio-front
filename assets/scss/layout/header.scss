@@ -1,0 +1,110 @@
+.l-header {
+  background: #fff;
+  border-radius: rem(16);
+  padding: rem(12);
+  position: fixed;
+  top: 0px;
+  left: rem(8);
+  right: rem(8);
+  z-index: 10;
+  transition: all 0.5s ease;
+
+  &.is-open {
+    background: #000;
+    margin: 0 rem(-8);
+  }
+
+  .c-burger {
+    display: none;
+  }
+
+  &__flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .u-btn {
+    svg {
+      width: rem(20);
+      height: auto;
+    }
+  }
+
+  &__mobile {
+    display: none;
+    height: calc(100vh - 8px - 56px);
+
+    .c-menu {
+      display: block;
+    }
+  }
+
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-32px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+      
+    }
+  }
+
+  @include mq('tablet') {
+    .c-menu {
+      display: none;
+    }
+
+    .c-burger {
+      display: flex;
+    }
+
+    .u-btn {
+      display: none;
+    }
+
+    &.is-open {
+      .l-header__mobile {
+        .c-menu {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-end;
+          height: 90%;
+
+          &__item {
+            animation: fadeInLeft 0.6s ease forwards;
+            opacity: 0;
+            color: #fff;
+
+            &:last-child {
+              margin-top: 95px;
+            }
+
+            svg {
+              margin-left: 15px;
+            }
+
+            &:nth-child(1) {
+              animation-delay: 0.1s;
+            }
+            &:nth-child(2) {
+              animation-delay: 0.25s;
+            }
+            &:nth-child(3) {
+              animation-delay: 0.4s;
+            }
+            &:nth-child(4) {
+              animation-delay: 0.55s;
+            }
+            &:nth-child(5) {
+              animation-delay: 0.7s;
+            }
+          }
+        }
+      }
+    }
+  }
+}

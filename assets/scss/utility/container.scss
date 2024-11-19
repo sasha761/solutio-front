@@ -1,0 +1,9 @@
+.u-container {
+	max-width: rem(1425);
+	margin: 0 auto;
+	// padding: 0 20px;
+
+	@include mq('tablet') {
+		// padding: 0 15px;
+	}
+}

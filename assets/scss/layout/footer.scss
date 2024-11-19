@@ -1,0 +1,121 @@
+.l-footer {
+  background: #171717;
+  border-radius: rem(40);
+  padding: rem(40);
+  color: white;
+
+  &__flex {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .c-social {
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: 150%;
+    color: #fff;
+
+    display: flex;
+    align-items: flex-start;
+
+    &__title {
+      margin-right: rem(168);
+    }
+
+    &__list {
+      text-decoration: underline;
+      
+    }
+
+    &__item {
+      text-align: right;
+      margin-bottom: rem(8);
+      display: block;
+    }
+  }
+
+  .c-menu {
+    display: block;
+    margin-top: rem(60);
+    
+    &__item {
+      color: white;
+      margin-right: 0;
+      margin-bottom: rem(8);
+      text-decoration: underline;
+      font-weight: 400;
+      font-size: rem(16);
+      line-height: 150%;
+      text-align: right;
+      display: block;
+    }
+  }
+
+  .c-contat-us {
+    a {
+      margin-left: rem(20);
+    }
+  }
+
+  @include mq('tablet') {
+    padding: 40px 20px;
+		margin: 0 -8px -8px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    &__flex {
+      flex-direction: column;
+    }
+
+    &__left {
+      margin-bottom: 40px;
+    }
+
+    &__right {
+      display: flex;
+    }
+
+    .c-logo {
+      margin-bottom: 20px;
+    }
+
+    .c-contat-us {
+      margin-bottom: 20px;
+    }
+
+    .c-social {  
+      flex-direction: column;
+  
+      &__title {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+  
+      &__list {
+        text-decoration: underline;
+      }
+  
+      &__item {
+        text-align: left;
+      }
+    }
+
+    .c-menu {
+      margin-top: 44px;
+      margin-left: 48px;
+      
+      &__item {
+        text-align: left;
+      }
+    }
+  }
+}

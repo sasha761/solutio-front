@@ -1,0 +1,35 @@
+.c-menu {
+	display: flex;
+	align-items: center;
+	color: #000;
+	font-weight: 500;
+	line-height: 1.2;
+	font-family: "Inter", sans-serif;
+	
+	&__item {
+		font-weight: 400;
+		font-size: rem(16);
+		line-height: 150%;
+		color: #000;
+		margin-right: rem(90);
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	@include mq('tablet-wide') {
+		&__item {
+			margin-right: 40px;
+		}
+	}
+
+	@include mq('tablet') {
+		&__item {
+			display: flex;
+			align-items: center;
+			font-size: 48px;
+			margin-right: 0;
+		}
+	}
+}
