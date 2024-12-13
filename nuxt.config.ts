@@ -1,17 +1,21 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { fileURLToPath, URL } from 'node:url'
+import { config } from 'dotenv';
+config();
 
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
+  runtimeConfig: {
+    public: {
+      gtagKey: process.env.GTAG_KEY || ''
+    }
+  },
   css: ['@/assets/scss/main.scss'],
   alias: {
     '@': fileURLToPath(new URL('.', import.meta.url)),
   },
-  modules: [
-    '@pinia/nuxt',
-    'nuxt-lazy-load'
-  ],
+  modules: ['@pinia/nuxt', 'nuxt-lazy-load', 'nuxt-calendly'],
   lazyLoad: {
     images: true,
     videos: true,
@@ -29,9 +33,15 @@ export default defineNuxtConfig({
       // See IntersectionObserver documentation
     }
   },
+  calendly: {
+    isEnabled: true,
+    loadWidgetCSS: true,
+    loadWidgetCloseIconSvg: true
+  },
   plugins: [
     '~/plugins/vue-scrollto.js',
     '~/plugins/lazy-background.js',
+    '~/plugins/google-analytics.js'
   ],
   app: {
     head: {
